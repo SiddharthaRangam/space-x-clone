@@ -3,7 +3,7 @@ const StarSheild = () => {
         <section className='overflow-hidden'>
 
             <div className='relative'>
-                <img src="public/Assets/hero_Sheild.webp" alt="starShield" />
+                <img src="/assets/hero_Sheild.webp" alt="starShield" />
                 <ul className='uppercase absolute top-[35%] left-[35%] text-white'>
                     <li className='text-8xl font-extrabold'>starShield</li>
                     <li className='pt-6 ml-30 font-bold'>supporting national security</li>
@@ -22,7 +22,7 @@ const StarSheild = () => {
                         <hr />
 
                         <div className='mt-6'>
-                            <img src="public/Assets/icons/icon-security.webp" alt="" className='absolute' />
+                            <img src="/assets/icons/icon-security.webp" alt="" className='absolute' />
                             <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>earth observation</li>
                         </div>
 
@@ -32,7 +32,7 @@ const StarSheild = () => {
                     <ul>
                         <hr />
                         <div className='mt-6'>
-                            <img src="public/Assets/icons/icon-connected.webp" alt="" className='absolute' />
+                            <img src="/assets/icons/icon-connected.webp" alt="" className='absolute' />
                             <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>communications</li>
                         </div>
                         <li>Starshield provides assured global communications to government users with Starshield user equipment.</li>
@@ -41,7 +41,7 @@ const StarSheild = () => {
                     <ul>
                         <hr />
                         <div className='mt-6'>
-                            <img src="public/Assets/icons/icon-payloads.webp" alt="" className='absolute' />
+                            <img src="/assets/icons/icon-payloads.webp" alt="" className='absolute' />
                             <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>hosted payloads</li>
                         </div>
                         <li>Starshield builds satellite buses to support the most demanding customer payload missions.</li>
@@ -52,7 +52,7 @@ const StarSheild = () => {
             <article className='h-full w-screen relative'>
 
                 <div className='absolute top-0 right-0 h-full w-250 bg-gradient-to-l from-black/90 via-black/70 to-transparent'></div>
-                <img src="public/Assets/capacity.webp" alt="" />
+                <img src="/Assets/capacity.webp" alt="" />
 
                 <ul className='absolute right-30 top-100 text-white flex flex-col  items-end w-120'>
                     <li className='text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>security</li>
@@ -62,7 +62,7 @@ const StarSheild = () => {
 
             <article className='w-screen h-screen relative'>
                 <div className='absolute top-0 right-0 h-full w-250 bg-gradient-to-l from-black/90 via-black/70 to-transparent'></div>
-                <img src="public/Assets/modular-design.webp" alt="" />
+                <img src="/assets/modular-design.webp" alt="" />
                 <ul className='absolute right-30 top-80 text-white flex flex-col  items-end w-120'>
                     <li className='text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>Modular design</li>
                     <li>Designed to meet diverse mission requirements, Starshield satellites are capable of integrating a wide variety of payloads, offering unique versatility to users.</li>
@@ -71,7 +71,7 @@ const StarSheild = () => {
 
             <article className='w-screen h-screen relative'>
                 <div className='absolute top-0 left-0 h-full w-250 bg-gradient-to-r from-black/90 via-black/70 to-transparent'></div>
-                <img src="public/Assets/interoperability.webp" alt="" />
+                <img src="/assets/interoperability.webp" alt="" />
                 <ul className='absolute left-30 top-80 text-white flex flex-col  items-end w-120'>
                     <li className='text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>Interoperability</li>
                     <li>Starlink's inter-satellite laser communications terminal, which is the only communications laser operating at scale in orbit today, can be integrated onto partner satellites to enable incorporation into the Starshield network.</li>
@@ -79,7 +79,7 @@ const StarSheild = () => {
             </article>
 
             <article className='relative h-screen w-screen'>
-                <img src="public/Assets/rapid-development.webp" alt="" />
+                <img src="/assets/rapid-development.webp" alt="" />
                 <ul className='absolute right-30 top-80 text-white flex flex-col  items-end w-120'>
                     <li className='text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>Rapid development and deployment</li>
                     <li>With the proven ability to iterate rapidly, SpaceX's unique full-stack approach in developing end-to-end systems, from launch vehicles to user terminals, enables the deployment of capabilities at scale with unprecedented speed.</li>
@@ -88,7 +88,7 @@ const StarSheild = () => {
 
             <article className='relative h-screen w-screen'>
                 <div className='absolute top-0 left-0 h-full w-250 bg-gradient-to-r from-black/90 via-black/70 to-transparent'></div>
-                <img src="public/Assets/resilient.webp" alt="" />
+                <img src="/assets/resilient.webp" alt="" />
                 <ul className='absolute left-20 top-80 text-white flex flex-col  items-end w-120'>
                     <li className='text-start w-120 uppercase text-5xl font-extrabold pb-5'>Resilient and scalable capability</li>
                     <li>Starshield's proliferated low-Earth orbit architecture provides inherent resiliency and constant connectivity to on-orbit assets, while SpaceX's proven rapid launch capability provides expedient and economical access to space.</li>
@@ -97,7 +97,7 @@ const StarSheild = () => {
 
             <article className='relative w-screen'>
                 <div className='absolute top-0 right-0 h-full w-250 bg-gradient-to-l from-black/90 via-black/70 to-transparent'></div>
-                <img src="public/Assets/proven-partnerships.webp" alt="" />
+                <img src="/assets/proven-partnerships.webp" alt="" />
                 <ul className='absolute right-20 top-80 text-white flex flex-col  items-end w-120'>
                     <li className='text-start w-120 uppercase text-5xl font-extrabold pb-5'>Proven partnerships</li>
                     <li>SpaceX's ongoing work with the Department of Defense and other partners demonstrates our ability to provide in-space and on-ground capability at scale.</li>

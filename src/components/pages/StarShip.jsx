@@ -25,7 +25,7 @@ const StarShip = () => {
         <section className='overflow-hidden'>
 
             <article className='h-full w-screen relative'>
-                <img src="public/Assets/starship_hero_d.jpg" alt="" />
+                <img src="/assets/starship_hero_d.jpg" alt="" />
 
                 <ul className='absolute top-0 left-0 text-white flex flex-col justify-center items-center w-screen h-screen uppercase'>
                     <li className='text-8xl font-extrabold pb-5'>Starship</li>
@@ -88,7 +88,7 @@ const StarShip = () => {
             </article>
 
             <article className='h-[70vh] w-screen bg-black relative'>
-                <img src="public/Assets/Starship.jpg" alt="" className='h-[45vh] absolute left-40 rounded-l' />
+                <img src="/assets/Starship.jpg" alt="" className='h-[45vh] absolute left-40 rounded-l' />
                 <div className='absolute top-0 right-150 h-full w-80 bg-gradient-to-l from-black via-black/90 to-transparent pointer-events-auto'></div>
 
                 <ul className='absolute text-white right-40 top-20 w-120'>
