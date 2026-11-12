@@ -1,4 +1,3 @@
-import React from 'react'
 import { BUTTON_STYLES } from '../../config/constants'
 
 const Home = () => {
@@ -6,12 +5,13 @@ const Home = () => {
     <section className='overflow-hidden'>
 
       <div className='relative h-screen'>
-        <video autoPlay
+        <video 
+          autoPlay
           loop
           muted
           playsInline
           className='absolute w-full h-full object-cover brightness-80'>
-          <source src="https://sxcontent9668.azureedge.us/cms-assets/assets/20260522_Starship_Flight12_web1080_v2_4755b2a6e3.mp4" type='video/mp4' />
+          <source src="public/Assets/Starship Flight.mp4" type='video/mp4' />
         </video>
         <div className='absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/40 via-black/40 to-transparent'></div>
 
@@ -35,7 +35,7 @@ const Home = () => {
           loop
         >
           <source
-            src="https://sxcontent9668.azureedge.us/cms-assets/assets/Mobile_v4_HB_e1d2eda88f.mp4"
+            src="public/Assets/MarsPlanet.mp4"
             type="video/mp4"
           />
         </video>
@@ -49,7 +49,7 @@ const Home = () => {
       </div>
 
       <div className='relative'>
-        <img src="https://sxcontent9668.azureedge.us/cms-assets/assets/Revolutionizing_Space_Tech_Desktop_ec67ad03c2.jpg" alt="" className='h-[120vh] brightness-90' />
+        <img src="public/Assets/Revolutionizing_Space_Tech.jpg" alt="" className='h-[120vh] brightness-90' />
         <ul className='absolute top-30 right-40 text-white'>
           <li className='text-5xl font-extrabold uppercase'>Revolutionizing space <br /> technology</li>  <br />
           <li>SpaceX's Starship spacecraft and Super Heavy rocket is a fully reusable transportation system <br /> designed to carry both crew and cargo to Earth orbit, the Moon, Mars, and beyond.</li> <br />
@@ -59,7 +59,7 @@ const Home = () => {
 
       <div className='h-screen w-screen relative'>
         <video muted loop autoPlay playsInline poster='/wp6449702-falcon-computer-4k-wallpapers.jpg' className='h-screen w-screen object-cover brightness-80'>
-          <source src='https://sxcontent9668.azureedge.us/cms-assets/assets/Leading_Launch_Service_Mobile_02email_c06f4154a8.mp4' type='video/mp4' />
+          <source src='public/Assets/Leading_Launch_Service_Mobile.mp4' type='video/mp4' />
         </video>
         <ul className='absolute top-30 left-30 text-white '>
           <li className='text-5xl font-extrabold uppercase'>World's leading launch <br /> service provider</li> <br />
@@ -71,7 +71,7 @@ const Home = () => {
 
       <div className='relative overflow-hidden'>
 
-        <img src="https://sxcontent9668.azureedge.us/cms-assets/assets/Advancing_Human_Spaceflight_Desktop_61c8ba1c67.jpg" alt="" className='brightness-90 h-[130vh] w-[130vw]' />
+        <img src="public/Assets/Advancing_Human_Spaceflight.jpg" alt="" className='brightness-90 h-[130vh] w-[130vw]' />
 
         <div className='absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-black via-black/80 to-transparent'></div>
 

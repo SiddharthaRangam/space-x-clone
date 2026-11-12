@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { STARSHIP_SLIDES } from '../../config/constants'
 
 const StarShip = () => {
@@ -25,7 +25,7 @@ const StarShip = () => {
         <section className='overflow-hidden'>
 
             <article className='h-full w-screen relative'>
-                <img src="https://www.spacex.com/assets/images/vehicles/starship/starship_hero_d.jpg" alt="" />
+                <img src="public/Assets/starship_hero_d.jpg" alt="" />
 
                 <ul className='absolute top-0 left-0 text-white flex flex-col justify-center items-center w-screen h-screen uppercase'>
                     <li className='text-8xl font-extrabold pb-5'>Starship</li>
@@ -34,9 +34,9 @@ const StarShip = () => {
             </article>
 
             <article className="relative h-[130vh] overflow-hidden bg-black">
-                <video 
+                <video
                     key={slide.video}
-                    className="absolute right-0 h-[130vh] w-[80vw] object-contain" 
+                    className="absolute right-0 h-[130vh] w-[80vw] object-contain"
                     autoPlay
                     muted
                     loop
@@ -50,7 +50,7 @@ const StarShip = () => {
                 <div className="absolute left-20 top-1/2 -translate-y-1/2 text-white w-[500px] z-10">
                     <h1 className="text-5xl font-extrabold uppercase mb-6">
                         {slide.title}
-                    </h1> 
+                    </h1>
 
                     <p className="text-gray-300 mb-8">
                         {slide.description}
@@ -88,14 +88,14 @@ const StarShip = () => {
             </article>
 
             <article className='h-[70vh] w-screen bg-black relative'>
-                <img src="https://sxcontent9668.azureedge.us/cms-assets/assets/starship_tile_cover_photo_041d78820b.jpg" alt="" className='h-[50vh] absolute left-40 rounded-lg' />
-                <div className='absolute top-0 right-50 h-full w-250 bg-gradient-to-l from-black/90 via-black to-transparent'></div>
+                <img src="public/Assets/Starship.jpg" alt="" className='h-[45vh] absolute left-40 rounded-l' />
+                <div className='absolute top-0 right-150 h-full w-80 bg-gradient-to-l from-black via-black/90 to-transparent pointer-events-auto'></div>
 
-                    <ul className='absolute text-white right-40 top-20 w-120'>
-                        <li className='uppercase text-3xl font-extrabold'>starship</li> <br />
-                        <li className='text-neutral-400'>SpaceX engineers are working to solve one of the most difficult engineering challenges in history: developing a fully, rapidly reusable rocket.</li> <br />
-                        <button className='uppercase p-4 border border-gray-500 rounded-lg text-xs'>watch now</button>
-                    </ul> 
+                <ul className='absolute text-white right-40 top-20 w-120'>
+                    <li className='uppercase text-3xl font-extrabold'>starship</li> <br />
+                    <li className='text-neutral-400'>SpaceX engineers are working to solve one of the most difficult engineering challenges in history: developing a fully, rapidly reusable rocket.</li> <br />
+                    <button className='uppercase p-4 border border-gray-500 rounded-lg text-xs'>watch now</button>
+                </ul>
             </article>
 
             <article>
