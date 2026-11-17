@@ -1,0 +1,270 @@
+/* Responsive media and layout overrides. Loaded after index.css. */
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Keep full-bleed media constrained to its section instead of the viewport. */
+.home-hero,
+.home-multiplanetary,
+.home-feature,
+.home-launch,
+.starship-hero,
+.starship-specs,
+.starship-summary,
+.shield-header,
+.shield-feature {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.home-hero > video,
+.home-launch > video,
+.home-multiplanetary > video {
+  max-width: none;
+}
+
+.home-feature > img,
+.shield-feature > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero > video,
+.home-launch > video {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.starship-hero > img,
+.shield-header > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .home-multiplanetary {
+    min-height: 85svh;
+    height: 85svh;
+  }
+
+  .home-multiplanetary .planet-video {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: cover;
+  }
+
+  .home-feature,
+  .home-launch {
+    min-height: 75svh;
+    height: 75svh;
+  }
+
+  .home-feature > img,
+  .home-advancing > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .home-feature .feature-copy,
+  .home-advancing .feature-copy,
+  .home-launch .feature-copy {
+    right: clamp(1.25rem, 5vw, 3rem);
+    left: clamp(1.25rem, 5vw, 3rem);
+    width: auto;
+    max-width: 42rem;
+  }
+
+  .starship-specs {
+    min-height: 90svh;
+    height: 90svh;
+  }
+
+  .starship-specs > video {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .starship-specs-copy {
+    left: clamp(2rem, 7vw, 5rem);
+    width: min(52vw, 32rem);
+  }
+
+  .starship-summary {
+    min-height: 65svh;
+    height: auto;
+  }
+
+  .shield-header {
+    min-height: 75svh;
+    height: 75svh;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-hero {
+    min-height: 82svh;
+    height: 82svh;
+  }
+
+  .home-multiplanetary {
+    min-height: 78svh;
+    height: 78svh;
+  }
+
+  .home-multiplanetary .planet-video {
+    opacity: 0.72;
+  }
+
+  .home-feature,
+  .home-launch,
+  .home-advancing {
+    min-height: 72svh;
+    height: 72svh;
+  }
+
+  .home-feature > img,
+  .home-advancing > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .home-feature .feature-copy,
+  .home-advancing .feature-copy,
+  .home-launch .feature-copy {
+    top: auto;
+    right: 1.25rem;
+    bottom: max(1.5rem, env(safe-area-inset-bottom));
+    left: 1.25rem;
+    width: auto;
+    max-width: 38rem;
+    padding: 0.75rem;
+  }
+
+  .home-feature .feature-copy .section-title,
+  .home-advancing .feature-copy .section-title,
+  .home-launch .feature-copy .section-title {
+    font-size: clamp(1.65rem, 7vw, 2.6rem);
+    line-height: 1.08;
+  }
+
+  .starship-hero {
+    min-height: 75svh;
+    height: 75svh;
+  }
+
+  .starship-hero > img {
+    height: 75svh;
+  }
+
+  .starship-hero-copy {
+    width: 100%;
+    height: 100%;
+    padding: 1.25rem;
+  }
+
+  .starship-specs {
+    min-height: 90svh;
+    height: auto;
+    padding: 5rem 1.25rem 5.5rem;
+  }
+
+  .starship-specs > video {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .starship-specs-copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 34rem;
+    transform: none;
+  }
+
+  .starship-summary {
+    min-height: 75svh;
+    height: 75svh;
+  }
+
+  .starship-summary > .summary-image {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .shield-header {
+    min-height: 72svh;
+    height: 72svh;
+  }
+
+  .shield-header-copy {
+    right: 1.25rem;
+    left: 1.25rem;
+    width: auto;
+  }
+
+  .shield-feature {
+    min-height: 72svh;
+    height: 72svh;
+  }
+
+  .shield-feature > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero,
+  .starship-hero {
+    min-height: 68svh;
+    height: 68svh;
+  }
+
+  .starship-hero > img {
+    height: 68svh;
+  }
+
+  .home-multiplanetary,
+  .home-feature,
+  .home-launch,
+  .home-advancing,
+  .shield-feature {
+    min-height: 68svh;
+    height: 68svh;
+  }
+
+  .starship-summary {
+    min-height: 72svh;
+    height: 72svh;
+  }
+
+  .home-hero-copy {
+    bottom: max(2rem, 7vh);
+  }
+}
