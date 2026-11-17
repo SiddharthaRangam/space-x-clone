@@ -2,9 +2,9 @@ import { BUTTON_STYLES } from '../../config/constants'
 
 const Home = () => {
   return (
-    <section className='overflow-hidden'>
+    <section className='home-page overflow-hidden'>
 
-      <div className='relative h-screen'>
+      <div className='home-hero relative h-screen'>
         <video 
           autoPlay
           loop
@@ -17,18 +17,18 @@ const Home = () => {
 
         <div className='absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black via-black/80 to-transparent'></div>
 
-        <div className='absolute text-white bottom-25 left-15'>
+        <div className='home-hero-copy absolute text-white bottom-25 left-15'>
           <h1 className='tracking-wider font-extrabold'>MAY 22 , 2026</h1>
-          <h1 className='text-6xl tracking-wide font-extrabold'>STARSHIP'S TWELFTH <br /> FLIGHT TEST</h1>
+          <h1 className='hero-title text-6xl tracking-wide font-extrabold'>STARSHIP'S TWELFTH <br /> FLIGHT TEST</h1>
           <button className={BUTTON_STYLES.primary}>WATCH</button>
         </div>
       </div>
 
 
-      <div className='relative bg-black h-[130vh] overflow-hidden'>
+      <div className='home-multiplanetary relative bg-black h-[130vh] overflow-hidden'>
 
         <video
-          className='absolute h-[70%] w-[70%] object-cover translate-x-150 translate-y-30'
+          className='planet-video absolute h-[70%] w-[70%] object-cover translate-x-150 translate-y-30'
           autoPlay
           muted
           playsInline
@@ -40,51 +40,51 @@ const Home = () => {
           />
         </video>
 
-        <div className='text-white relative top-100 left-25'>
-          <h1 className='text-7xl uppercase font-["Oswald"] tracking-wide leading-none'>Making life <br /> multiplanetary</h1>
+        <div className='planet-copy text-white relative top-100 left-25'>
+          <h1 className='section-title text-7xl uppercase font-["Oswald"] tracking-wide leading-none'>Making life <br /> multiplanetary</h1>
           <h1 className='mt-6 text-[17px]'>SpaceX was founded under the belief that a future where humanity is out exploring the stars is <br /> fundamentally more exciting than one where we are not.</h1>
           <button type='submit' className={BUTTON_STYLES.primary} >EXPLORE</button>
         </div>
 
       </div>
 
-      <div className='relative'>
+      <div className='home-feature relative'>
         <img src="/assets/Revolutionizing_Space_Tech.jpg" alt="" className='h-[120vh] brightness-90' />
-        <ul className='absolute top-30 right-40 text-white'>
-          <li className='text-5xl font-extrabold uppercase'>Revolutionizing space <br /> technology</li>  <br />
+        <ul className='feature-copy absolute top-30 right-40 text-white'>
+          <li className='section-title text-5xl font-extrabold uppercase'>Revolutionizing space <br /> technology</li>  <br />
           <li>SpaceX's Starship spacecraft and Super Heavy rocket is a fully reusable transportation system <br /> designed to carry both crew and cargo to Earth orbit, the Moon, Mars, and beyond.</li> <br />
           <button className={BUTTON_STYLES.secondary}>Learn more</button>
         </ul>
       </div>
 
-      <div className='h-screen w-screen relative'>
-        <video muted loop autoPlay playsInline poster='/wp6449702-falcon-computer-4k-wallpapers.jpg' className='h-screen w-screen object-cover brightness-80'>
+      <div className='home-launch h-screen w-screen relative'>
+        <video muted loop autoPlay playsInline poster='/wp6449702-falcon-computer-4k-wallpapers.jpg' className='launch-video h-screen w-screen object-cover brightness-80'>
           <source src='/assets/Leading_Launch_Service_Mobile.mp4' type='video/mp4' />
         </video>
-        <ul className='absolute top-30 left-30 text-white '>
-          <li className='text-5xl font-extrabold uppercase'>World's leading launch <br /> service provider</li> <br />
+        <ul className='feature-copy absolute top-30 left-30 text-white '>
+          <li className='section-title text-5xl font-extrabold uppercase'>World's leading launch <br /> service provider</li> <br />
           <li>SpaceX leads the world in launches with its reliable, reusable rockets and is developing the fully <br /> and rapidly reusable rockets necessary to transform humanity's ability to access space into <br /> something as routine as air travel.
           </li> <br />
           <button className={BUTTON_STYLES.tertiary}>Reserve your Ride</button>
         </ul>
       </div>
 
-      <div className='relative overflow-hidden'>
+      <div className='home-feature home-advancing relative overflow-hidden'>
 
         <img src="/assets/Advancing_Human_Spaceflight.jpg" alt="" className='brightness-90 h-[130vh] w-[130vw]' />
 
         <div className='absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-black via-black/80 to-transparent'></div>
 
 
-        <ul className='absolute top-40 right-20 text-white'>
-          <li className='text-5xl font-extrabold uppercase'>Advancing human <br /> spaceflight</li> <br />
+        <ul className='feature-copy absolute top-40 right-20 text-white'>
+          <li className='section-title text-5xl font-extrabold uppercase'>Advancing human <br /> spaceflight</li> <br />
           <li>Since returning human spaceflight capabilities to the United States in 2020, SpaceX is helping <br /> build a new era where not just hundreds of people, but thousands and ultimately millions will be <br /> able to explore space.</li>
           <br />
           <button className={BUTTON_STYLES.tertiary}>join a mission</button>
         </ul>
       </div>
 
-      <article className='h-20 bg-black text-white flex justify-around items-center gap-30 px-20 font-bold tracking-wider text-[15px]'>
+      <article className='site-footer h-20 bg-black text-white flex justify-around items-center gap-30 px-20 font-bold tracking-wider text-[15px]'>
         <p>X</p>
 
         <ul className='flex gap-10'>

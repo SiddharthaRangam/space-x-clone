@@ -22,18 +22,18 @@ const StarShip = () => {
     }, []);
 
     return (
-        <section className='overflow-hidden'>
+        <section className='starship-page overflow-hidden'>
 
-            <article className='h-full w-screen relative'>
+            <article className='starship-hero h-full w-screen relative'>
                 <img src="/assets/starship_hero_d.jpg" alt="" />
 
-                <ul className='absolute top-0 left-0 text-white flex flex-col justify-center items-center w-screen h-screen uppercase'>
-                    <li className='text-8xl font-extrabold pb-5'>Starship</li>
+                <ul className='starship-hero-copy absolute top-0 left-0 text-white flex flex-col justify-center items-center w-screen h-screen uppercase'>
+                    <li className='hero-title text-8xl font-extrabold pb-5'>Starship</li>
                     <li>Service to Earth Orbit, Moon, Mars and Beyond</li>
                 </ul>
             </article>
 
-            <article className="relative h-[130vh] overflow-hidden bg-black">
+            <article className="starship-specs relative h-[130vh] overflow-hidden bg-black">
                 <video
                     key={slide.video}
                     className="absolute right-0 h-[130vh] w-[80vw] object-contain"
@@ -47,8 +47,8 @@ const StarShip = () => {
 
                 <div className="absolute inset-0 bg-black/60"></div>
 
-                <div className="absolute left-20 top-1/2 -translate-y-1/2 text-white w-[500px] z-10">
-                    <h1 className="text-5xl font-extrabold uppercase mb-6">
+                <div className="starship-specs-copy absolute left-20 top-1/2 -translate-y-1/2 text-white w-[500px] z-10">
+                    <h1 className="section-title text-5xl font-extrabold uppercase mb-6">
                         {slide.title}
                     </h1>
 
@@ -87,11 +87,11 @@ const StarShip = () => {
                 </button>
             </article>
 
-            <article className='h-[70vh] w-screen bg-black relative'>
-                <img src="/assets/Starship.jpg" alt="" className='h-[45vh] absolute left-40 rounded-l' />
+            <article className='starship-summary h-[70vh] w-screen bg-black relative'>
+                <img src="/assets/Starship.jpg" alt="" className='summary-image h-[45vh] absolute left-40 rounded-l' />
                 <div className='absolute top-0 right-150 h-full w-80 bg-gradient-to-l from-black via-black/90 to-transparent pointer-events-auto'></div>
 
-                <ul className='absolute text-white right-40 top-20 w-120'>
+                <ul className='summary-copy absolute text-white right-40 top-20 w-120'>
                     <li className='uppercase text-3xl font-extrabold'>starship</li> <br />
                     <li className='text-neutral-400'>SpaceX engineers are working to solve one of the most difficult engineering challenges in history: developing a fully, rapidly reusable rocket.</li> <br />
                     <button className='uppercase p-4 border border-gray-500 rounded-lg text-xs'>watch now</button>

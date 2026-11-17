@@ -1,10 +1,12 @@
-import React from 'react'
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useCountdown } from '../../hooks/useCountdown'
 import { NAV_MENU_ITEMS } from '../../config/constants'
 
 const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
   const timeLeft = useCountdown("May 26, 2026 20:20:00")
+  const closeMenu = () => setMenuOpen(false)
   const renderMenuItem = (items) => (
     items.map((item) =>
       item.path ? (
@@ -18,8 +20,8 @@ const NavBar = () => {
   )
 
   return (
-    <nav className='w-screen flex items-start justify-between px-10 fixed top-0 left-0 z-50 '>
-      <div className='flex text-[13px] font-bold tracking-wider text-gray-100 z-20'>
+    <nav className='site-nav w-screen flex items-start justify-between px-10 fixed top-0 left-0 z-50 '>
+      <div className='desktop-navigation flex text-[13px] font-bold tracking-wider text-gray-100 z-20'>
         <NavLink to="/"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/SpaceX-Logo.svg" alt="logo" className='h-4.5 opacity-60 brightness-500 mt-5 cursor-pointer'  /></NavLink>
 
         <article className="group relative hover:bg-black/40 duration-500 text-center w-30 h-40 pt-6">
@@ -67,7 +69,47 @@ const NavBar = () => {
         UPCOMING LAUNCHES  T{timeLeft.days}days{timeLeft.hours}hr{timeLeft.minutes}min{timeLeft.seconds}sec
       </div>
 
+      <button
+        type="button"
+        className="menu-toggle"
+        aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+        aria-expanded={menuOpen}
+        aria-controls="mobile-navigation"
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
 
+      <div id="mobile-navigation" className={`mobile-navigation${menuOpen ? ' is-open' : ''}`}>
+        <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+        <details>
+          <summary>Vehicles</summary>
+          {NAV_MENU_ITEMS.vehicles.map((item) => item.path
+            ? <NavLink key={item.label} to={item.path} onClick={closeMenu}>{item.label}</NavLink>
+            : <span key={item.label}>{item.label}</span>)}
+        </details>
+        <details>
+          <summary>Human Spaceflight</summary>
+          {NAV_MENU_ITEMS.humanSpaceflight.map((item) => <span key={item.label}>{item.label}</span>)}
+        </details>
+        <a href="https://www.starlink.com/" onClick={closeMenu}>Starlink</a>
+        <NavLink to="/starShield" onClick={closeMenu}>Starshield</NavLink>
+        <details>
+          <summary>xAI</summary>
+          {NAV_MENU_ITEMS.xai.map((item) => <span key={item.label}>{item.label}</span>)}
+        </details>
+        <span>Terafab</span>
+        <details>
+          <summary>Company</summary>
+          {NAV_MENU_ITEMS.company.map((item) => <span key={item.label}>{item.label}</span>)}
+        </details>
+        <details>
+          <summary>Shop</summary>
+          {NAV_MENU_ITEMS.shop.map((item) => <span key={item.label}>{item.label}</span>)}
+        </details>
+      </div>
     </nav>
   )
 }
