@@ -1,109 +1,105 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { STARSHIP_SLIDES } from '../../config/constants'
 
 const StarShip = () => {
-    const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0)
+  const asset = (fileName) => `${import.meta.env.BASE_URL}Assets/${fileName}`
 
-    const nextSlide = () => {
-        setCurrent((prev) => (prev + 1) % STARSHIP_SLIDES.length);
-    };
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? STARSHIP_SLIDES.length - 1 : prev - 1))
+  }
 
-    const prevSlide = () => {
-        setCurrent((prev) => (prev - 1 + STARSHIP_SLIDES.length) % STARSHIP_SLIDES.length);
-    };
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % STARSHIP_SLIDES.length)
+  }
 
-    const slide = STARSHIP_SLIDES[current];
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrent((prev) => (prev + 1) % STARSHIP_SLIDES.length);
-        }, 5000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % STARSHIP_SLIDES.length)
+    }, 5000)
 
-        return () => clearInterval(timer);
-    }, []);
+    return () => clearInterval(timer)
+  }, [])
 
-    return (
-        <section className='starship-page overflow-hidden'>
+  const slide = STARSHIP_SLIDES[current]
 
-            <article className='starship-hero h-full w-screen relative'>
-                <img src="/assets/starship_hero_d.jpg" alt="" />
+  return (
+    <section className='starship-page overflow-hidden'>
+      <article className='starship-hero h-full w-screen relative'>
+        <img src={asset('starship_hero_d.jpg')} alt='' />
 
-                <ul className='starship-hero-copy absolute top-0 left-0 text-white flex flex-col justify-center items-center w-screen h-screen uppercase'>
-                    <li className='hero-title text-8xl font-extrabold pb-5'>Starship</li>
-                    <li>Service to Earth Orbit, Moon, Mars and Beyond</li>
-                </ul>
-            </article>
+        <ul className='starship-hero-copy absolute top-0 left-0 text-white flex flex-col justify-center items-center w-screen h-screen uppercase'>
+          <li className='hero-title text-8xl font-extrabold pb-5'>Starship</li>
+          <li>Service to Earth Orbit, Moon, Mars and Beyond</li>
+        </ul>
+      </article>
 
-            <article className="starship-specs relative h-[130vh] overflow-hidden bg-black">
-                <video
-                    key={slide.video}
-                    className="absolute right-0 h-[130vh] w-[80vw] object-contain"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                >
-                    <source src={slide.video} />
-                </video>
+      <article className="starship-specs relative h-[130vh] overflow-hidden bg-black">
+        <video
+          key={slide.video}
+          className="absolute right-0 h-[130vh] w-[80vw] object-contain"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={slide.video} />
+        </video>
 
-                <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-                <div className="starship-specs-copy absolute left-20 top-1/2 -translate-y-1/2 text-white w-[500px] z-10">
-                    <h1 className="section-title text-5xl font-extrabold uppercase mb-6">
-                        {slide.title}
-                    </h1>
+        <div className="starship-specs-copy absolute left-20 top-1/2 -translate-y-1/2 text-white w-[500px] z-10">
+          <h1 className="section-title text-5xl font-extrabold uppercase mb-6">
+            {slide.title}
+          </h1>
 
-                    <p className="text-gray-300 mb-8">
-                        {slide.description}
-                    </p>
+          <p className="text-gray-300 mb-8">
+            {slide.description}
+          </p>
 
-                    <div className="flex justify-between py-4 border-b border-gray-500">
-                        <span>HEIGHT</span>
-                        <span>{slide.height}</span>
-                    </div>
+          <div className="flex justify-between py-4 border-b border-gray-500">
+            <span>HEIGHT</span>
+            <span>{slide.height}</span>
+          </div>
 
-                    <div className="flex justify-between py-4 border-b border-gray-500">
-                        <span>DIAMETER</span>
-                        <span>{slide.diameter}</span>
-                    </div>
+          <div className="flex justify-between py-4 border-b border-gray-500">
+            <span>DIAMETER</span>
+            <span>{slide.diameter}</span>
+          </div>
 
-                    <div className="flex justify-between py-4 border-b border-gray-500">
-                        <span>PAYLOAD</span>
-                        <span>{slide.payload}</span>
-                    </div>
-                </div>
+          <div className="flex justify-between py-4 border-b border-gray-500">
+            <span>PAYLOAD</span>
+            <span>{slide.payload}</span>
+          </div>
+        </div>
 
-                <button
-                    onClick={prevSlide}
-                    className="absolute left-5 top-1/2 z-20 text-white text-4xl"
-                >
-                    ❮
-                </button>
+        <button
+          onClick={prevSlide}
+          className="absolute left-5 top-1/2 z-20 text-white text-4xl"
+        >
+          ❮
+        </button>
 
-                <button
-                    onClick={nextSlide}
-                    className="absolute right-5 top-1/2 z-20 text-white text-4xl"
-                >
-                    ❯
-                </button>
-            </article>
+        <button
+          onClick={nextSlide}
+          className="absolute right-5 top-1/2 z-20 text-white text-4xl"
+        >
+          ❯
+        </button>
+      </article>
 
-            <article className='starship-summary h-[70vh] w-screen bg-black relative'>
-                <img src="/assets/Starship.jpg" alt="" className='summary-image h-[45vh] absolute left-40 rounded-l' />
-                <div className='absolute top-0 right-150 h-full w-80 bg-gradient-to-l from-black via-black/90 to-transparent pointer-events-auto'></div>
+      <article className='starship-summary h-[70vh] w-screen bg-black relative'>
+        <img src={asset('Starship.jpg')} alt='' className='summary-image h-[45vh] absolute left-40 rounded-l' />
+        <div className='absolute top-0 right-150 h-full w-80 bg-gradient-to-l from-black via-black/90 to-transparent pointer-events-auto'></div>
 
-                <ul className='summary-copy absolute text-white right-40 top-20 w-120'>
-                    <li className='uppercase text-3xl font-extrabold'>starship</li> <br />
-                    <li className='text-neutral-400'>SpaceX engineers are working to solve one of the most difficult engineering challenges in history: developing a fully, rapidly reusable rocket.</li> <br />
-                    <button className='uppercase p-4 border border-gray-500 rounded-lg text-xs'>watch now</button>
-                </ul>
-            </article>
-
-            <article>
-
-            </article>
-
-        </section>
-    )
+        <ul className='summary-copy absolute text-white right-40 top-20 w-120'>
+          <li className='uppercase text-3xl font-extrabold'>starship</li> <br />
+          <li className='text-neutral-400'>SpaceX engineers are working to solve one of the most difficult engineering challenges in history: developing a fully, rapidly reusable rocket.</li> <br />
+          <button className='uppercase p-4 border border-gray-500 rounded-lg text-xs'>watch now</button>
+        </ul>
+      </article>
+    </section>
+  )
 }
 
 export default StarShip

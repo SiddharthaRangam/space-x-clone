@@ -1,6 +1,8 @@
 import { BUTTON_STYLES } from '../../config/constants'
 
 const Home = () => {
+  const asset = (fileName) => `${import.meta.env.BASE_URL}Assets/${fileName}`
+
   return (
     <section className='home-page overflow-hidden'>
 
@@ -11,7 +13,7 @@ const Home = () => {
           muted
           playsInline
           className='absolute w-full h-full object-cover brightness-80'>
-          <source src="/assets/Starship Flight.mp4" type='video/mp4' />
+          <source src={asset('Starship Flight.mp4')} type='video/mp4' />
         </video>
         <div className='absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/40 via-black/40 to-transparent'></div>
 
@@ -35,7 +37,7 @@ const Home = () => {
           loop
         >
           <source
-            src="/assets/MarsPlanet.mp4"
+            src={asset('MarsPlanet.mp4')}
             type="video/mp4"
           />
         </video>
@@ -49,7 +51,7 @@ const Home = () => {
       </div>
 
       <div className='home-feature relative'>
-        <img src="/assets/Revolutionizing_Space_Tech.jpg" alt="" className='h-[120vh] brightness-90' />
+        <img src={asset('Revolutionizing_Space_Tech.jpg')} alt="" className='h-[120vh] brightness-90' />
         <ul className='feature-copy absolute top-30 right-40 text-white'>
           <li className='section-title text-5xl font-extrabold uppercase'>Revolutionizing space <br /> technology</li>  <br />
           <li>SpaceX's Starship spacecraft and Super Heavy rocket is a fully reusable transportation system <br /> designed to carry both crew and cargo to Earth orbit, the Moon, Mars, and beyond.</li> <br />
@@ -58,8 +60,8 @@ const Home = () => {
       </div>
 
       <div className='home-launch h-screen w-screen relative'>
-        <video muted loop autoPlay playsInline poster='/wp6449702-falcon-computer-4k-wallpapers.jpg' className='launch-video h-screen w-screen object-cover brightness-80'>
-          <source src='/assets/Leading_Launch_Service_Mobile.mp4' type='video/mp4' />
+        <video muted loop autoPlay playsInline poster={`${import.meta.env.BASE_URL}wp6449702-falcon-computer-4k-wallpapers.jpg`} className='launch-video h-screen w-screen object-cover brightness-80'>
+          <source src={asset('Leading_Launch_Service_Mobile.mp4')} type='video/mp4' />
         </video>
         <ul className='feature-copy absolute top-30 left-30 text-white '>
           <li className='section-title text-5xl font-extrabold uppercase'>World's leading launch <br /> service provider</li> <br />
@@ -71,7 +73,7 @@ const Home = () => {
 
       <div className='home-feature home-advancing relative overflow-hidden'>
 
-        <img src="/assets/Advancing_Human_Spaceflight.jpg" alt="" className='brightness-90 h-[130vh] w-[130vw]' />
+        <img src={asset('Advancing_Human_Spaceflight.jpg')} alt="" className='brightness-90 h-[130vh] w-[130vw]' />
 
         <div className='absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-black via-black/80 to-transparent'></div>
 

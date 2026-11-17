@@ -1,131 +1,87 @@
-const StarSheild = () => {
-    return (
-        <section className='starshield-page overflow-hidden'>
+const StarShield = () => {
+  const asset = (fileName) => `${import.meta.env.BASE_URL}Assets/${fileName}`
 
-            <div className='starshield-hero relative'>
-                <img src="/assets/hero_Sheild.webp" alt="starShield" />
-                <ul className='starshield-hero-copy uppercase absolute top-[35%] left-[35%] text-white'>
-                    <li className='hero-title text-8xl font-extrabold'>starShield</li>
-                    <li className='pt-6 ml-30 font-bold'>supporting national security</li>
-                </ul>
-            </div>
+  return (
+    <section className='shield-page overflow-hidden'>
+      <div className='shield-header relative h-[90vh] w-screen overflow-hidden'>
+        <img src={asset('hero_Sheild.webp')} alt='' className='h-full w-full object-cover brightness-75' />
+        <div className='absolute inset-0 bg-gradient-to-l from-black/80 via-black/40 to-black/40'></div>
 
-            <article className='starshield-intro h-screen w-screen flex flex-col bg-black text-white'>
+        <div className='shield-header-copy absolute left-20 top-1/2 -translate-y-1/2 text-white z-10'>
+          <h1 className='uppercase text-7xl font-extrabold'>Starshield</h1>
+          <p className='mt-6 max-w-xl text-lg text-gray-200'>Trusted satellite infrastructure for national security missions, resilient communications, and resilient data delivery.</p>
+        </div>
+      </div>
 
-                <ul className='intro-copy h-[50vh] w-screen flex justify-between items-center pt-30'>
-                    <li className='section-title text-5xl font-extrabold uppercase ml-5'>Secured satellite <br /> network for <br /> government entities</li>
-                    <li className='mr-10'>Starshield leverages SpaceX's Starlink technology and launch capability to support national security efforts. <br /> While Starlink is designed for consumer and commercial use, Starshield is designed for government use, with an <br /> initial focus on three areas:</li>
-                </ul>
+      <article className='shield-intro relative bg-black px-10 py-20 text-white'>
+        <div className='max-w-6xl mx-auto'>
+          <ul className='space-y-5'>
+            <li className='text-3xl uppercase font-extrabold'>Building the foundation for secure space access</li>
+            <li className='text-gray-300'>Starshield leverages SpaceX's Starlink technology and launch capability to support national security efforts. <br /> While Starlink is designed for consumer and commercial use, Starshield is designed for government use, with an <br /> initial focus on three areas:</li>
+          </ul>
 
-                <div className='shield-capabilities flex gap-4 ml-5 mr-5 relative'  >
-                    <ul>
-                        <hr />
+          <div className='shield-capabilities flex gap-4 ml-5 mr-5 relative mt-12'>
+            <ul>
+              <hr />
 
-                        <div className='mt-6'>
-                            <img src="/assets/icons/icon-security.webp" alt="" className='absolute' />
-                            <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>earth observation</li>
-                        </div>
+              <div className='mt-6'>
+                <img src={asset('icons/icon-security.webp')} alt='' className='absolute' />
+                <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>earth observation</li>
+              </div>
 
-                        <li>Starshield launches satellites with sensing payloads and delivers processed data directly to the user.</li>
-                    </ul>
+              <li>Starshield launches satellites with sensing payloads and delivers processed data directly to the user.</li>
+            </ul>
 
-                    <ul>
-                        <hr />
-                        <div className='mt-6'>
-                            <img src="/assets/icons/icon-connected.webp" alt="" className='absolute' />
-                            <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>communications</li>
-                        </div>
-                        <li>Starshield provides assured global communications to government users with Starshield user equipment.</li>
-                    </ul>
+            <ul>
+              <hr />
+              <div className='mt-6'>
+                <img src={asset('icons/icon-connected.webp')} alt='' className='absolute' />
+                <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>communications</li>
+              </div>
+              <li>Starshield provides assured global communications to government users with Starshield user equipment.</li>
+            </ul>
 
-                    <ul>
-                        <hr />
-                        <div className='mt-6'>
-                            <img src="/assets/icons/icon-payloads.webp" alt="" className='absolute' />
-                            <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>hosted payloads</li>
-                        </div>
-                        <li>Starshield builds satellite buses to support the most demanding customer payload missions.</li>
-                    </ul>
-                </div>
-            </article>
+            <ul>
+              <hr />
+              <div className='mt-6'>
+                <img src={asset('icons/icon-payloads.webp')} alt='' className='absolute' />
+                <li className='uppercase text-2xl pb-10 ml-20 pt-3 font-extrabold'>hosted payloads</li>
+              </div>
+              <li>Starshield builds satellite buses to support the most demanding customer payload missions.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
 
-            <article className='shield-feature h-full w-screen relative'>
+      <article className='shield-feature h-full w-screen relative'>
+        <div className='absolute top-0 right-0 h-full w-250 bg-gradient-to-l from-black/90 via-black/70 to-transparent'></div>
+        <img src={asset('capacity.webp')} alt='' />
 
-                <div className='absolute top-0 right-0 h-full w-250 bg-gradient-to-l from-black/90 via-black/70 to-transparent'></div>
-                <img src="/assets/capacity.webp" alt="" />
+        <ul className='shield-feature-copy absolute right-30 top-100 text-white flex flex-col items-end w-120'>
+          <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>security</li>
+          <li>Starlink already offers unparalleled end-to-end user data encryption. Starshield uses additional high-assurance cryptographic capability to host classified payloads and process data securely, meeting the most demanding government requirements.</li>
+        </ul>
+      </article>
 
-                <ul className='shield-feature-copy absolute right-30 top-100 text-white flex flex-col  items-end w-120'>
-                    <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>security</li>
-                    <li>Starlink already offers unparalleled end-to-end user data encryption. Starshield uses additional high-assurance cryptographic capability to host classified payloads and process data securely, meeting the most demanding government requirements.</li>
-                </ul>
-            </article>
+      <article className='shield-feature w-screen h-screen relative'>
+        <div className='absolute top-0 right-0 h-full w-250 bg-gradient-to-l from-black/90 via-black/70 to-transparent'></div>
+        <img src={asset('modular-design.webp')} alt='' />
+        <ul className='shield-feature-copy absolute right-30 top-80 text-white flex flex-col items-end w-120'>
+          <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>Modular design</li>
+          <li>Designed to meet diverse mission requirements, Starshield satellites are capable of integrating a wide variety of payloads, offering unique versatility to users.</li>
+        </ul>
+      </article>
 
-            <article className='shield-feature w-screen h-screen relative'>
-                <div className='absolute top-0 right-0 h-full w-250 bg-gradient-to-l from-black/90 via-black/70 to-transparent'></div>
-                <img src="/assets/modular-design.webp" alt="" />
-                <ul className='shield-feature-copy absolute right-30 top-80 text-white flex flex-col  items-end w-120'>
-                    <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>Modular design</li>
-                    <li>Designed to meet diverse mission requirements, Starshield satellites are capable of integrating a wide variety of payloads, offering unique versatility to users.</li>
-                </ul>
-            </article>
-
-            <article className='shield-feature w-screen h-screen relative'>
-                <div className='absolute top-0 left-0 h-full w-250 bg-gradient-to-r from-black/90 via-black/70 to-transparent'></div>
-                <img src="/assets/interoperability.webp" alt="" />
-                <ul className='shield-feature-copy absolute left-30 top-80 text-white flex flex-col  items-end w-120'>
-                    <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>Interoperability</li>
-                    <li>Starlink's inter-satellite laser communications terminal, which is the only communications laser operating at scale in orbit today, can be integrated onto partner satellites to enable incorporation into the Starshield network.</li>
-                </ul>
-            </article>
-
-            <article className='shield-feature relative h-screen w-screen'>
-                <img src="/assets/rapid-development.webp" alt="" />
-                <ul className='shield-feature-copy absolute right-30 top-80 text-white flex flex-col  items-end w-120'>
-                    <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>Rapid development and deployment</li>
-                    <li>With the proven ability to iterate rapidly, SpaceX's unique full-stack approach in developing end-to-end systems, from launch vehicles to user terminals, enables the deployment of capabilities at scale with unprecedented speed.</li>
-                </ul>
-            </article>
-
-            <article className='shield-feature relative h-screen w-screen'>
-                <div className='absolute top-0 left-0 h-full w-250 bg-gradient-to-r from-black/90 via-black/70 to-transparent'></div>
-                <img src="/assets/resilient.webp" alt="" />
-                <ul className='shield-feature-copy absolute left-20 top-80 text-white flex flex-col  items-end w-120'>
-                    <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5'>Resilient and scalable capability</li>
-                    <li>Starshield's proliferated low-Earth orbit architecture provides inherent resiliency and constant connectivity to on-orbit assets, while SpaceX's proven rapid launch capability provides expedient and economical access to space.</li>
-                </ul>
-            </article>
-
-            <article className='shield-feature relative w-screen'>
-                <div className='absolute top-0 right-0 h-full w-250 bg-gradient-to-l from-black/90 via-black/70 to-transparent'></div>
-                <img src="/assets/proven-partnerships.webp" alt="" />
-                <ul className='shield-feature-copy absolute right-20 top-80 text-white flex flex-col  items-end w-120'>
-                    <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5'>Proven partnerships</li>
-                    <li>SpaceX's ongoing work with the Department of Defense and other partners demonstrates our ability to provide in-space and on-ground capability at scale.</li>
-                </ul>
-            </article>
-
-            <article className='shield-footer h-[70vh] bg-black flex flex-col justify-center items-center'>
-                <p className='h-40 w-0.5 bg-white mb-15'></p>
-
-                <button className='text-white p-4 uppercase text-xs border border-gray-700 rounded-lg hover:bg-white hover:text-black duration-300'>
-                    Contact Us
-                </button>
-
-                <div className='site-footer uppercase text-white flex justify-between items-center w-[90%] pt-30 text-sm'>
-                    <h1>X</h1>
-                    <ul className='flex gap-10'>
-                        <li className='cursor-pointer'>Careers</li>
-                        <li className='cursor-pointer'>Updates</li>
-                        <li className='cursor-pointer'>Privacy Policy</li>
-                        <li className='cursor-pointer'>Suppliers</li>
-                    </ul>
-                    <h1>© 2026 SpaceX</h1>
-                </div>
-            </article>
-
-
-        </section>
-    )
+      <article className='shield-feature w-screen h-screen relative'>
+        <div className='absolute top-0 left-0 h-full w-250 bg-gradient-to-r from-black/90 via-black/70 to-transparent'></div>
+        <img src={asset('interoperability.webp')} alt='' />
+        <ul className='shield-feature-copy absolute left-30 top-80 text-white flex flex-col items-end w-120'>
+          <li className='section-title text-start w-120 uppercase text-5xl font-extrabold pb-5 text-gray-300'>Interoperability</li>
+          <li>Starshield is built to interoperate with existing government systems and mission architectures for seamless data sharing and rapid deployment.</li>
+        </ul>
+      </article>
+    </section>
+  )
 }
 
-export default StarSheild
+export default StarShield
